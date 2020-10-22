@@ -101,6 +101,11 @@ public class fenshu {
     }
     public fenshu(int a, int b) {
         fenzi = a;
+        if(b==0)
+        {
+            System.out.println("分母不能为0");
+            return;
+        }
         fenmu = b;
         fuhao=this.isFuhao();
         a=(a<0)?-a:a;
@@ -117,6 +122,11 @@ public class fenshu {
     }
 
     public void setFenmu(int fenmu) {
+        if(fenmu==0)
+        {
+            System.out.println("分母不能为0");
+            return;
+        }
         this.fenmu = fenmu;
         fuhao=this.isFuhao();
         this.fenmu=((fenmu<0)?-fenmu:fenmu);
